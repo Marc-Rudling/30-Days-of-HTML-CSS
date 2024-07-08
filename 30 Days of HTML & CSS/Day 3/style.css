@@ -1,0 +1,44 @@
+.box {
+	height: 75px;
+	width: 75px;
+	background-color: lightblue;
+	border-radius: 0.2rem;
+	transition: transform 0.2s;
+}
+
+.box:hover {
+	animation: wobble 1s infinite;
+}
+.container {
+	background-color: yellow;
+	width: 22%;
+	border-radius: 0.3rem;
+	display: grid;
+	gap: 1.2rem;
+	grid-template-columns: 1fr 1fr 1fr;
+	padding: 0.2rem 0.2rem;
+}
+
+@keyframes wobble {
+	0% {
+		transform: rotate(1deg);
+	}
+	15% {
+		transform: rotate(1deg) translateX(-5px);
+	}
+	30% {
+		transform: rotate(-5deg) translateX(5px);
+	}
+	45% {
+		transform: rotate(3deg) translateX(-3px);
+	}
+	60% {
+		transform: rotate(-3deg) translateX(3px);
+	}
+	75% {
+		transform: rotate(2deg) translateX(-2px);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
